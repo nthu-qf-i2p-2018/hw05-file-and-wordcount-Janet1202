@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 # -*- coding: utf-8 -*-
@@ -16,11 +16,12 @@ def main(filename):
     all_words = []
 
     for line in lines:
+        line =line.strip()
         words = line.split()
 
         for word in words:
             word = word.strip(string.punctuation)
-            if word != ' ':
+            if word:
                 all_words.append(word)
 
     from collections import Counter
